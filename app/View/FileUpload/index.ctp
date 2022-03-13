@@ -12,10 +12,13 @@
 	<div class="alert">
 		<h3>Import Form</h3>
 	</div>
+
+	<div class="upload-form">
 <?php
-echo $this->Form->create('FileUpload');
-echo $this->Form->input('file', array('label' => 'File Upload', 'type' => 'file'));
-echo $this->Form->submit('Upload', array('class' => 'btn btn-primary'));
+echo $this->Form->create(array(),['type'=> 'file']);
+echo $this->Form->input('file', array('label' => 'File Upload', 'type' => 'file', 'class'=> 'form-control'));
+//echo $this->Form->submit('Upload', array('class' => 'btn btn-primary'));
+echo $this->Form->button(__('Upload File'),['type' => 'submit', 'class'=> 'form-controlbtn btn-default']);
 echo $this->Form->end();
 ?>
 
@@ -36,16 +39,18 @@ echo $this->Form->end();
 		</thead>
 		<tbody>
 <?php
-foreach ($file_uploads as $file_upload) :
-?>
-			<tr>
-				<td><?php echo $file_upload['FileUpload']['id']; ?>
-				<td><?php echo $file_upload['FileUpload']['name']; ?>
-				<td><?php echo $file_upload['FileUpload']['email']; ?>
-				<td><?php echo $file_upload['FileUpload']['created']; ?>
-			</tr>
-<?php
-endforeach;
+if( isset($file_uploads)) { 
+	foreach ($file_uploads as $file_upload) :
+	?>
+				<tr>
+					<td><?php echo $file_upload['FileUpload']['id']; ?>
+					<td><?php echo $file_upload['FileUpload']['name']; ?>
+					<td><?php echo $file_upload['FileUpload']['email']; ?>
+					<td><?php echo $file_upload['FileUpload']['created']; ?>
+				</tr>
+	<?php
+	endforeach;
+}
 ?>
 		</tbody>
 	</table>

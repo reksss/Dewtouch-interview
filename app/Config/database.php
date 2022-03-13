@@ -72,9 +72,9 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' 		 => '',
-		'login'      => '',
-		'password'   => '',
-		'database'   => '',
+		'login'      => 'root',
+		'password'   => 'rekha',
+		'database'   => 'test',
 		'prefix'     => '',
 		'encoding'   => 'utf8',
 	);

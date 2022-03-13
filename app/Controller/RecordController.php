@@ -8,7 +8,9 @@
 			$this->setFlash('Listing Record page too slow, try to optimize it.');
 			
 			
+			// $records = array(); //$this->Record->find('all');
 			$records = $this->Record->find('all');
+
 			
 			$this->set('records',$records);
 			
