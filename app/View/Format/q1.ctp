@@ -51,15 +51,44 @@
 <script>
 
 $(document).ready(function(){
+	var selectedDialog = 0;
+
 	$(".dialog").dialog({
 		autoOpen: false,
 		width: '500px',
 		modal: true,
 		dialogClass: 'ui-dialog-blue'
+		,"buttons"	: 
+		{	
+			"Confirm" : 
+			{ 					 
+					text	: 	"Save",
+					id		: 	"Save",
+					click 	: 	function()
+								{  
+									console.log("*** save btn ***");
+ 
+									//window.open('q1_detail2.ctp');
+									//Router::connect('/', array('controller' => 'Format', 'action' =>  'q1_detail'));
+								}
+			}  
+		}
 	});
 
 	
 	$(".showDialog").click(function(){ var id = $(this).data('id'); $("#"+id).dialog('open'); });
+  
+	
+	$(".showDialog").hover(function(){
+	
+	  console.log("---- id ----", $(this).attr("data-id"));
+	  selectedDialog = $(this).attr("data-id");
+	  var id = $(this).data('id'); $("#"+id).dialog('open');
+  	}, function(){
+	   
+	});
+
+	//<?php echo $this->Html->link('Save',array('action'=>'Format','action'=>'q1_detail'));?>
 
 })
 

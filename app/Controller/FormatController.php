@@ -17,5 +17,11 @@
 			
 // 			$this->set('title',__('Question: Please change Pop Up to mouse over (soft click)'));
 		}
+
+		public function q1_detail2(){
+
+			$this->setFlash('Question: Please change Pop Up to mouse over (soft click)');
+			
+		}
 		
 	}

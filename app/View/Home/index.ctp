@@ -104,8 +104,8 @@
 					<?php echo $this->Html->image('rating.png',array('style'=>'width: 15px'))?>
 					
 				</td>
-				<td><?php echo $this->Html3->link('View Detail','/Migration/q1_instruction')?></td>
-				<td><?php //echo $this->Html->link('Click Me','/Migration/q1')?></td>
+				<td><?php echo $this->Html->link('View Detail','/Migration/q1_instruction')?></td>
+				<td><?php echo $this->Html->link('Click Me','/MigrateFile/q1_instruction')?></td>
 			</tr>
 		</tbody>
 	</table>
