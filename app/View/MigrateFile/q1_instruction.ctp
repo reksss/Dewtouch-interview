@@ -19,10 +19,7 @@ echo $this->Form->end();
 ?>
 
 	<hr />
-
 	<div class="alert alert-success">
 		<h3>Data Imported</h3>
 	</div>
-
-
 </div>
